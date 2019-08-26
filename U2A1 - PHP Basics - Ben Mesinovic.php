@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -45,7 +45,8 @@ echo $yourName;
 //
 // Q2
 echo "<h4> Question 2 </h4>";
-echo "<h1> Unit 2: PHP Basics</h2>";
+echo "<h1> Unit 2: PHP Basics</h1>";
+echo htmlspecialchars("With elements: <h1> Unit 2: PHP Basics</h1>");
 //
 // Q3
 echo "<h4> Question 3 </h4>";
@@ -73,5 +74,7 @@ echo $script_start_tag . $JS_array . $script_end_tag;
 
 echo "<script>
 		document.write(Tools[0]); </script>";
-
+		
+echo "<h1> Github: <a href='https://github.com/BMESI/wdv341/blob/master/U2A1%20-%20PHP%20Basics%20-%20Ben%20Mesinovic.php'>Unit 2 Assignment 1</a> </h1>";
+echo "</br><hr><h4>  <a href='../../index.html'>Return to Index/Home...</a></h4>";
 ?>
