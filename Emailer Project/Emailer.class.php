@@ -18,7 +18,7 @@ Email Class
           -Set/Get Subject
           -sendEmail( )
 			-It will properly format the Sender's address as an additional header using the From: format as described in PHP.net for the email( ).
-			It will properly format the Message to meet the requirements of the PHP email( ) for the message.
+			-It will properly format the Message to meet the requirements of the PHP email( ) for the message.
 			-It will call the PHP function mail( ) and use the expected parameters.
 			-It will return the response of the mail( ) function when the sendEmail( ) is complete.
 -Creat a page called processEmail.php.  Your PHP processing page should do the following:
@@ -47,7 +47,7 @@ class Emailer {
  public $To; // change var name to "recipient address"
  public $Subject;// change to "email "??
  public $Message; // "emailmessage"
- public $AddedHeaders;
+ public $AddedHeaders = [];
 //
 // Construction of Emailer
 //
@@ -58,6 +58,7 @@ function __construct(){
 // Methods of Emailer.... like, getters and setters 'n stuff
 //
 //Begin sender methods
+//
  function SetSenderAddr($FromArg){ //  
 	  $this->From = $FromArg;
 
@@ -68,7 +69,8 @@ function __construct(){
 }
 //End sender methods
 //
-//begin send to methods
+//begin receiver methods
+//
 function SetSendToAddr($ToArg){
 	 $this->To = $ToArg;
 }
@@ -78,6 +80,7 @@ function GetSendToAddr(){
 //end send to methods
 //
 // begin subject and message methods
+//
 function SetSubjectLine($SubjectArg){
 	 $this->Subject = $SubjectArg;
 }
@@ -92,16 +95,27 @@ function GetMessage(){
 }
 // end subject and message methods
 //
-// Added headers methods
-function SetAddedHeaders($AdditionalHeadersArg){
-	 $this->AddedHeaders = $AddedHeadersArg;
+// Headers methods
+//
+function SetAddedHeaders(){ 
+	// push recip and sender adds to header var
+	array_push($this->AddedHeaders,$this->GetSenderAddr());
+	 array_push($this->AddedHeaders, $this->GetSendToAddr());
 }
 function GetAddedHeaders(){
-	return  $this->AddedHeaders;
+	// returnheaders is used for returning all the headers in a single var
+	$ReturnHeaders = "";
+	for ($x = 0; $x < count($this->AddedHeaders) ; $x++) {
+	  $ReturnHeaders .= "\r\n";
+	  $ReturnHeaders .= $this->AddedHeaders[$x];
+	  $ReturnHeaders .= "\r\n";
+	}
+return $ReturnHeaders;
 }
 // end headers methods
 //
 // Send mail
+//
 function SendEmail(){
 	$FromAddress = "From: ". $this->GetSenderAddr();
  	if ( mail($this->GetSendToAddr(),$this->GetSubjectLine(), $this->GetMessage(),$FromAddress) )
