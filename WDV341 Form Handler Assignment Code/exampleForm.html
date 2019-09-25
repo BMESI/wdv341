@@ -5,9 +5,9 @@
     <title>WDV341 Intro PHP - Form Example</title>
     <style>
         #email {
+            /// Used for hiding fields from users for honey pot
             display: none;
         }
-       
     </style>
 </head>
 
@@ -23,41 +23,28 @@
             First Name:
             <input type="text" name="firstName" id="firstName" />
             <input type="text" name="email" id="email" />
-
         </p>
         <p>
             Last Name:
             <input type="text" name="lastName" id="lastName" />
-
         </p>
         <p>
             School:
             <input type="text" name="school" id="school" />
-
         </p>
         <p>
-            Radio 1:
-            <input type="radio" name="radioname" id="radioid1" />
-
-
-            Radio 2:
-            <input type="radio" name="radioname" id="radioid2" />
-
-
-            Radio 3:
-            <input type="radio" name="radioname" id="radioid3" />
-
+            <input type="radio" name="radioname" id="radioid1" value="radiovalue1" />
+            Radio 1
+            <input type="radio" name="radioname" id="radioid2" value="radiovalue2" />
+            Radio 2
+            <input type="radio" name="radioname" id="radioid3" value="radiovalue3" />
+            Radio 3
         </p>
         <p>
             Checkbox 1:
             <input type="checkbox" name="checkboxname1" id="checkboxid1" />
-
-
             Checkbox 2:
             <input type="checkbox" name="checkboxname2" id="checkboxid2" />
-
-
-
         </p>
         <p>
             Selection List
@@ -65,17 +52,13 @@
                 <option> Option 1</option>
                 <option> Option 2</option>
                 <option> Option 3</option>
-
             </select>
-
         </p>
         <p>
             <input type="submit" name="button" id="button" value="Submit" />
             <input type="reset" name="button2" id="button2" value="Reset" />
         </p>
     </form>
-
     <p>&nbsp;</p>
 </body>
-
 </html>

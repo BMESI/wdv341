@@ -7,6 +7,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 //display_errors = on;
 //Method 1.  This uses a loop to read each set of name-value pairs stored in the $_POST array
+// I added an extra variable to copy $_Post values to make another table.
 	$tableBody = "";		//use a variable to store the body of the table being built by the script
 	$_POSTCOPY = "";
 
@@ -33,14 +34,18 @@ error_reporting(E_ALL);
 	$inFirstName = $_POST["firstName"];		//Get the value entered in the first name field
 	$inLastName = $_POST["lastName"];		//Get the value entered in the last name field
 	$inSchool = $_POST["school"];			//Get the value entered in the school field
-	// for chxbx 1
+	//
+	// for chxbx 1 - i want to add this to the exxtra copy of the POST table to make it shown as turned off or unchecked.
+	//
 	if ( isset ($_POST["checkboxname1"])  ){
 		$inCheckbox1 =  $_POST["checkboxname1"];
 	}else {
 		$inCheckbox1 ="off";
 		$_POSTCOPY .="<td>$CheckBoxLabel1</td><td>$inCheckbox1</td>";
 	}
-	// for chxbx 2
+	//
+	// for chxbx 2 - i want to add this to the exxtra copy of the POST table to make it shown as turned off or unchecked.
+	//
 	if ( isset ($_POST["checkboxname2"])  ){
 	$inCheckbox2 =  $_POST["checkboxname2"];
 	}else {
@@ -50,23 +55,19 @@ error_reporting(E_ALL);
 	// for radio
 	if ( isset ($_POST["radioname"])  ){
 		$inRadio = $_POST["radioname"];
-
 	}else {
 		$inRadio ="off";
 		$_POSTCOPY .="<tr><td>$RadioLabel</td><td>$inRadio</td></tr>";	
 	}
-		//$inCheckbox1;
-		//$inCheckbox2;
-
 	$inSelectList =  $_POST["selectlistname"];
 	  
 
 	  //
-	  // if statement for honey pot 
+	  // if statement for honey pot - if 'email' field  is not empty, then it is spam. 
 	  //
 	  if(  ! empty($_POST["email"]) ){
 	  	  echo "<h1> Spam detected...</h1>";
-		  // blank out all variables and reroute to another page and then  log details to server 
+		  // reroute user to another page and then log details to server 
 		  // 
 	  }
 
@@ -79,7 +80,7 @@ error_reporting(E_ALL);
 	-Add two checkboxes to the HTML form.
 	-Add a drop down list with at least three selections to the HTML form.
 	-Update the PHP as needed to display the selected values of all fields on the form.
-	Update the PHP as needed to implement a honeypot form protection.
+	-Update the PHP as needed to implement a honeypot form protection.
 	
 	
 	*/
