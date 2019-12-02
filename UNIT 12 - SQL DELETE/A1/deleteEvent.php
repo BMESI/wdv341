@@ -25,7 +25,7 @@ The page should do the following:
 */
 $DeleteFile =  "../../UNIT 12 - SQL DELETE/Delete.php";
 $selectEvents=  "selectEvents.php";
-
+$Message = "";
 //$FormValidation = "../../UNIT 12 - SQL DELETE/FormValidation.php";
 			include $DeleteFile; include $selectEvents;// include $FormValidation;
 
@@ -34,8 +34,19 @@ $selectEvents=  "selectEvents.php";
 		$Delete = new Delete();
 		if(isset($_GET['event_id']) && $_GET['event_id'] !== ''){
 			$DeleteID = $_GET['event_id'];
-			 $Delete->DeleteSingleEvent($DeleteID);
-		}
+						$Message = "Event  deleted! Press select to reload the event list.";
+
+			}else{				
+			$Message = "Event not deleted! Press select to reload the event list.";
+
+				 ?> 
+
+				<h2> Event deletion failed! CLick link to go back: <a href="selectEvents.php">back</a></h2>
+<?php
+			}
+			if ( $Delete->DeleteSingleEvent($DeleteID) ) {
+
+		
 
 ?>
 <!DOCTYPE html>
@@ -106,7 +117,7 @@ fieldset{
 }
 </style>
 <div id="orderArea">
-<h3> Event deleted! Press select to reload the event list.</h3>
+<h3> <?php echo $Message;  ?></h3>
 <form name="deleteform" method="GET" action="selectEvents.php">
 
 </div>
@@ -114,3 +125,9 @@ fieldset{
 </body>
 </html>
 
+<?php }// end if delete 
+else{
+
+	}
+
+?>
