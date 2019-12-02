@@ -1,0 +1,255 @@
+/*
+    for login page
+
+*/
+        .fieldsContainer{
+            background-color:coral;
+			border:5px solid red;
+			width: 200px;
+			display:block;
+			padding:10px;
+			margin:auto auto;
+			border-radius:25px;
+			animation: borderpulse 2s infinite;
+		}
+.bottomarea {
+    display: block;
+    background-color: coral;
+    float: right;
+    clear: none;
+    width: 200px;
+    padding: 10px;
+    border-radius: 25px;
+    float: left;
+    margin: auto 5px;
+    text-align: center;
+}
+        @keyframes borderpulse {
+				0% {
+					border:5px solid red;
+				}
+				50% {
+					border:5px solid white;
+				}       
+				100%{
+					border:5px solid red;
+				}
+		}
+		.optionsContainer{
+			display:block;
+			background-color:coral;
+			width: 200px;
+			height:auto;
+			padding:10px;
+			border-radius:25px;
+			float:left;
+			margin:auto 5px;
+			text-align:center;
+		}
+		.options{
+			display:block;
+			width:200px;
+			height:35px;
+			margin:5px;
+			border-radius:15px;
+		}
+        label{
+			display: inline-block;
+            font-style:italic;			
+			margin:auto;
+        }
+		#userpassword, #username{					
+			width: 190px;
+			height:35px;
+			margin:5px;
+			border-radius:15px;
+
+		}
+		#reset, #login{					
+			width: 100px;
+			margin:5px;
+			margin:auto;
+			display:block;
+			border-radius:25px;
+
+		}
+		#reset{
+			background:red;
+		}
+		#login{
+			background:Chartreuse ;
+		}
+		#reset{
+			float:left;
+		}
+		.error{
+			color:red;
+			font-style:italic;
+			display:block;
+
+		}
+		.deleteeventoption{
+			background-color:red;
+			border-radius:25px;
+			float:right;
+			display:block;
+			padding:3px;
+		}
+		.updateeventoption a{
+			background-color:blue;
+			color:white;
+			border-radius:25px;
+			float:right;
+			display:block;
+			padding:3px;
+		}
+		.eventBlock{
+			width:50%;
+			min-width:200px;
+			margin-left:auto;
+			margin-right:auto;
+			background-color:#CCC;	
+			display:inline-block;
+			padding: 10px;
+			border-radius:25px;
+			float:left;
+			margin:5px;
+
+		}
+		
+		.displayEvent{
+			text-align:left;
+			display:block;
+			border-top:5px solid black;
+			border-left: 2px solid black;
+		}
+		.displayPresenter{
+			text-align:left;
+			display:block;
+			
+		}
+		.displayDescription {
+			display:block;
+
+		}
+		.displayTime{
+			text-align:left;
+			display:block;
+			
+		}
+		.displayDate{
+			text-align:left;
+			display:block;
+			
+		}
+		.error{
+			color:red;
+			font-style: italic;
+
+		}
+		.DateCurrent{
+			color:red;
+			font-style: bold;
+
+		}
+		.DateFuture{
+			font-style: italic;
+
+		}
+		@media only screen and (max-width: 600px) {
+					.eventBlock{   font-size: 15px;}
+					.optionsContainer{	font-size:15px;}
+		}
+
+/*
+    for update page
+
+*/
+.instructionarea {
+    width: 99%;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #CCC;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 25px;
+    clear: both;
+    float: none;
+}
+}
+#displayArea {
+    width: 600px;
+    border: thin solid black;
+    margin: auto auto;
+    padding-left: 20px;
+}
+		.eventBlock1{
+			width:50%;
+			min-width:200px;
+			margin-left:auto;
+			margin-right:auto;
+			background-color:#CCC;	
+			display:inline-block;
+			padding: 10px;
+			border-radius:25px;
+			float:left;
+			margin:5px;
+
+		}
+#displayArea h3	{
+	text-align:center;	
+	background-color:beige;
+}
+.error	{
+	color:red;
+	font-style:italic;	
+}
+.specialStuff {
+	display: none;
+}
+#event_name, #event_description, #event_presenter{
+		border-radius:30px; 	width:50%;
+
+}
+#full_event_year ,#event_month_number, #event_day_number, #event_minute, #event_hour {
+				border-radius:30px; 	width:55px;
+
+}
+table, th, td {
+  border: 1px solid green;
+}
+label {
+ margin: auto;
+
+}
+fieldset{
+}
+#submitbuttonid{
+	background-color:green;
+	width:200px;
+	border-radius:30px;
+}
+#resetbuttonid{
+	background-color:yellow;
+	width:200px;
+	border-radius:30px;
+
+}
+#selectbuttonid{
+	background-color:green;
+	width:200px;
+	border-radius:30px;
+}
+#deletebuttonid{
+	background-color:red;
+	width:200px;
+	border-radius:30px;
+}
+#deletemarkerid{
+	width:100px;
+}
+		@media only screen and (max-width: 600px) {
+					.eventBlock{   font-size: 15px;}
+					.optionsContainer{	font-size:15px;}
+		}
