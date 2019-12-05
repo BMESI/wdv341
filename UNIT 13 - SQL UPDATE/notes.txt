@@ -1,0 +1,19 @@
+
+
+This page will do several things.  It is based off of your insert form page.  It will display the information from the selected record on the form.  This will allow the user to update the fields and submit them.  The update form will then use a self posting page to perform the actual update to the database.  
+
+Step One:
+
+    Modify your selectEvents.php page to include a "Update" option for each displayed row.  The link should include a record id passed as a $GET parameter.
+
+Create a PHP page will that display the selected record content on a form.  It will do the following:
+
+    Make a copy of your eventsForm.php page.  Rename it to updateEventsForm.php.
+    Change the action attribute to call the updateEventForm.php page.
+    Connect the page to the wdv341_business database using the dbConnect.php code.
+    Use the $_GET variable containing the event id value that was passed from the selectEvents.php page.
+    Create a SELECT SQL command that will pull the desired row from the database. 
+    Use PHP to modify the HTML to place the column values into their corresponding value fields on the form.
+    When the form is submitted it will create and process an SQL UPDATE command on the current record on the form.
+    Test your form to see that the values from the database show up in the fields.
+
