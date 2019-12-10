@@ -1,0 +1,278 @@
+/*
+    general styles, background , etc
+    background source: https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-10-full.jpg
+*/
+body {
+    background-image: url("background.jpg");
+ background-size: cover;}
+/*
+    navigation bar style section
+    used for both top and bottom navigation
+*/
+ul {
+    background-color: whitesmoke;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+li {
+    float: left;
+}
+li a {
+        display: block;
+        border-right: 2px solid white;
+        text-align: center;
+        padding: 5px 20px;
+        text-decoration: none;
+        width: 100px;
+        color: steelblue;
+}
+li a:hover {
+     background-color: gray;
+}
+.lastitem {
+    border: none;
+} 
+/**
+    Form error messages
+*/
+.error {
+    color: red;
+    font-style: italic;
+}
+/*
+    Form styles
+*/
+label{
+    display:block;
+}
+input{
+    display:inline;
+    border-radius:20px;
+}
+/*
+    Registration form
+
+*/
+#registerform {
+    background-color: whitesmoke;
+    width: 50%;
+    margin: 5px auto;
+}
+.regformlabel {
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+}
+.regformtextbox {
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+    width:75%;
+    height:35px;
+}
+/*
+    Log in pane
+*/
+.loginpane {
+    background-color: whitesmoke;
+    width: 50%;
+    margin: 5px auto;
+}
+#username {
+    display: block;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+    width: 75%;
+}
+#userpassword {
+    display: block;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+    width: 75%;
+}
+#usernamelabel {
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+}
+#userpasswordlabel {
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+}
+form span {
+    border-radius: 20px;
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    clear: none;
+    margin: 10px;
+    text-align: center;
+}
+#resetlogin {
+    margin: 20px;
+    padding: 0;
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    float:left;
+}
+#login {
+    margin: 20px;
+    padding: 0;
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+}
+}
+/* 
+    Styles for add post section
+
+*/
+#title {
+    width: 50%;
+    padding: 4px 20px;
+    box-sizing: border-box;
+}
+#post {
+    width: 50%;
+    height: 150px;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    resize: none;
+    border-radius: 20px;
+}
+/**
+    view blogs section
+
+*/
+.blogreadingsheader {
+    display: block;
+    text-align: center;
+}
+.todaysblogs {
+    background-color: whitesmoke;
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+.noposttoday {
+    font-style: italic;
+    border-radius: 20px;
+}
+.author {
+    font-style: italic;
+}
+.tags {
+    font-style: italic;
+    border: 5px white dotted;
+    height: 120px;
+    border-radius: 20px;
+}
+.generalblogs {
+    background-color: whitesmoke;
+    width: 70%;
+    margin: 15px auto;
+    padding:10px;
+    border-radius:20px;
+}
+.blognavigation {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/*
+fade effect for bottom of blogs when looking for more blogs
+*/
+.fade {
+    position: relative;
+    bottom: 4em;
+    height: 4em;
+    background: -webkit-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% );
+    background-image: -moz-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% );
+    background-image: -o-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% );
+    background-image: linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100% );
+}
+
+/** 
+    email contact form
+
+*/
+.contacttop {
+    text-align: center;
+}
+.contactbottom {
+    text-align: center;
+}
+#contactform {
+    background-color: whitesmoke;
+    width: 50%;
+    margin: 5px auto;
+
+}
+
+#message {
+    width: 70%;
+    height: 150px;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    resize: none;
+    border-radius: 20px;
+}
+.contactmessage {
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+}
+#emailcontact {
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+    width: 70%;
+}
+#emaillabel {
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    clear: both;
+    margin: auto;
+}
+.deleteoption {
+    background-color: red;
+    width: 100px;
+    border-radius: 30px;
+}
+
+#deletemarkerid {
+    width: 100px;
+}
